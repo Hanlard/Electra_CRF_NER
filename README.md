@@ -1,7 +1,7 @@
 # Electra_CRF_NER
 1. 模型结构采用：预训练模型+CRF
 
-2. 我们的测试环境为2个Tesla P4 一块显存8GB
+2. 我们的测试环境为1个Tesla P4 显存8GB
 
 3. 使用Flask部署，以调用服务的形式测速，速度为 BERT-base+CRF:4600字/秒 Albert_small+CRF:21000字/秒 Electra_small+CRF:16000字/秒
 
