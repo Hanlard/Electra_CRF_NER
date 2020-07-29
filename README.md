@@ -1,3 +1,12 @@
+# ABSTRACT
+
+Training large deep neural networks needs massive high quality annotation data, but the time and labor costs are too expensive for small business. We start a company-name recognition task with a small scale and low quality training data, then using skills to enhanced model training speed and predicting performance with least artificial participation. The methods we use involve lite pre-training models such as Albert-small or Electra-small with financial corpus, knowledge of distillation and multi-stage learning. The result is that we improve the recall rate of company names recognition task from 0.73 to 0.92 and get 4 times as fast as BERT-Bilstm-CRF model.
+
+# Dataset
+url：https://pan.baidu.com/s/1isI-n1hOmP6nq8hO6SJKsw 
+
+password：0klm
+
 # Electra_CRF_NER
 1. 模型结构采用：预训练模型+CRF
 
