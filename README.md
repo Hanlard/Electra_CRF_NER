@@ -15,6 +15,14 @@ password：0klm
 # Model framework
 ![add image](https://github.com/Hanlard/Electra_CRF_NER/blob/master/workflow/model.png)
 
+# Prediction speed
+![add image](https://github.com/Hanlard/Electra_CRF_NER/blob/master/workflow/prediction%20speed.png)
+
+# Muti-stage learning
+![add image](https://github.com/Hanlard/Electra_CRF_NER/blob/master/workflow/muti-stage%20learning.png)
+
+# Pre-training on financial corpus
+![add image](https://github.com/Hanlard/Electra_CRF_NER/blob/master/workflow/pre-training.png)
 
 # Electra_CRF_NER
 1. 模型结构采用：预训练模型+CRF
