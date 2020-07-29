@@ -7,11 +7,14 @@ url：https://pan.baidu.com/s/1isI-n1hOmP6nq8hO6SJKsw
 
 password：0klm
 
+
 # Workflow
 ![add image](https://github.com/Hanlard/Electra_CRF_NER/blob/master/workflow/framework.png)
 
+
 # Model framework
 ![add image](https://github.com/Hanlard/Electra_CRF_NER/blob/master/workflow/model.png)
+
 
 # Electra_CRF_NER
 1. 模型结构采用：预训练模型+CRF
