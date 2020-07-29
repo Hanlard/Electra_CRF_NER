@@ -1,0 +1,1537 @@
+Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+loading configuration file prev_trained_model/electra_zh_base/config.json
+Model config ElectraConfig {
+  "architectures": [
+    "ElectraModel"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "embedding_size": 768,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "electra",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "summary_activation": "gelu",
+  "summary_last_dropout": 0.1,
+  "summary_type": "first",
+  "summary_use_proj": true,
+  "type_vocab_size": 2,
+  "vocab_size": 21128
+}
+
+Model name 'prev_trained_model/electra_zh_base/vocab.txt' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased). Assuming 'prev_trained_model/electra_zh_base/vocab.txt' is a path or url to a directory containing tokenizer files.
+Didn't find file prev_trained_model/electra_zh_base/added_tokens.json. We won't load it.
+Didn't find file prev_trained_model/electra_zh_base/special_tokens_map.json. We won't load it.
+Didn't find file prev_trained_model/electra_zh_base/tokenizer_config.json. We won't load it.
+loading file prev_trained_model/electra_zh_base/vocab.txt
+loading file None
+loading file None
+loading file None
+loading weights file prev_trained_model/electra_zh_base/pytorch_model.bin
+Some weights of the model checkpoint at prev_trained_model/electra_zh_base were not used when initializing ElectraCrfForNer: ['embeddings.word_embeddings.weight', 'embeddings.position_embeddings.weight', 'embeddings.token_type_embeddings.weight', 'embeddings.LayerNorm.weight', 'embeddings.LayerNorm.bias', 'encoder.layer.0.attention.self.query.weight', 'encoder.layer.0.attention.self.query.bias', 'encoder.layer.0.attention.self.key.weight', 'encoder.layer.0.attention.self.key.bias', 'encoder.layer.0.attention.self.value.weight', 'encoder.layer.0.attention.self.value.bias', 'encoder.layer.0.attention.output.dense.weight', 'encoder.layer.0.attention.output.dense.bias', 'encoder.layer.0.attention.output.LayerNorm.weight', 'encoder.layer.0.attention.output.LayerNorm.bias', 'encoder.layer.0.intermediate.dense.weight', 'encoder.layer.0.intermediate.dense.bias', 'encoder.layer.0.output.dense.weight', 'encoder.layer.0.output.dense.bias', 'encoder.layer.0.output.LayerNorm.weight', 'encoder.layer.0.output.LayerNorm.bias', 'encoder.layer.1.attention.self.query.weight', 'encoder.layer.1.attention.self.query.bias', 'encoder.layer.1.attention.self.key.weight', 'encoder.layer.1.attention.self.key.bias', 'encoder.layer.1.attention.self.value.weight', 'encoder.layer.1.attention.self.value.bias', 'encoder.layer.1.attention.output.dense.weight', 'encoder.layer.1.attention.output.dense.bias', 'encoder.layer.1.attention.output.LayerNorm.weight', 'encoder.layer.1.attention.output.LayerNorm.bias', 'encoder.layer.1.intermediate.dense.weight', 'encoder.layer.1.intermediate.dense.bias', 'encoder.layer.1.output.dense.weight', 'encoder.layer.1.output.dense.bias', 'encoder.layer.1.output.LayerNorm.weight', 'encoder.layer.1.output.LayerNorm.bias', 'encoder.layer.2.attention.self.query.weight', 'encoder.layer.2.attention.self.query.bias', 'encoder.layer.2.attention.self.key.weight', 'encoder.layer.2.attention.self.key.bias', 'encoder.layer.2.attention.self.value.weight', 'encoder.layer.2.attention.self.value.bias', 'encoder.layer.2.attention.output.dense.weight', 'encoder.layer.2.attention.output.dense.bias', 'encoder.layer.2.attention.output.LayerNorm.weight', 'encoder.layer.2.attention.output.LayerNorm.bias', 'encoder.layer.2.intermediate.dense.weight', 'encoder.layer.2.intermediate.dense.bias', 'encoder.layer.2.output.dense.weight', 'encoder.layer.2.output.dense.bias', 'encoder.layer.2.output.LayerNorm.weight', 'encoder.layer.2.output.LayerNorm.bias', 'encoder.layer.3.attention.self.query.weight', 'encoder.layer.3.attention.self.query.bias', 'encoder.layer.3.attention.self.key.weight', 'encoder.layer.3.attention.self.key.bias', 'encoder.layer.3.attention.self.value.weight', 'encoder.layer.3.attention.self.value.bias', 'encoder.layer.3.attention.output.dense.weight', 'encoder.layer.3.attention.output.dense.bias', 'encoder.layer.3.attention.output.LayerNorm.weight', 'encoder.layer.3.attention.output.LayerNorm.bias', 'encoder.layer.3.intermediate.dense.weight', 'encoder.layer.3.intermediate.dense.bias', 'encoder.layer.3.output.dense.weight', 'encoder.layer.3.output.dense.bias', 'encoder.layer.3.output.LayerNorm.weight', 'encoder.layer.3.output.LayerNorm.bias', 'encoder.layer.4.attention.self.query.weight', 'encoder.layer.4.attention.self.query.bias', 'encoder.layer.4.attention.self.key.weight', 'encoder.layer.4.attention.self.key.bias', 'encoder.layer.4.attention.self.value.weight', 'encoder.layer.4.attention.self.value.bias', 'encoder.layer.4.attention.output.dense.weight', 'encoder.layer.4.attention.output.dense.bias', 'encoder.layer.4.attention.output.LayerNorm.weight', 'encoder.layer.4.attention.output.LayerNorm.bias', 'encoder.layer.4.intermediate.dense.weight', 'encoder.layer.4.intermediate.dense.bias', 'encoder.layer.4.output.dense.weight', 'encoder.layer.4.output.dense.bias', 'encoder.layer.4.output.LayerNorm.weight', 'encoder.layer.4.output.LayerNorm.bias', 'encoder.layer.5.attention.self.query.weight', 'encoder.layer.5.attention.self.query.bias', 'encoder.layer.5.attention.self.key.weight', 'encoder.layer.5.attention.self.key.bias', 'encoder.layer.5.attention.self.value.weight', 'encoder.layer.5.attention.self.value.bias', 'encoder.layer.5.attention.output.dense.weight', 'encoder.layer.5.attention.output.dense.bias', 'encoder.layer.5.attention.output.LayerNorm.weight', 'encoder.layer.5.attention.output.LayerNorm.bias', 'encoder.layer.5.intermediate.dense.weight', 'encoder.layer.5.intermediate.dense.bias', 'encoder.layer.5.output.dense.weight', 'encoder.layer.5.output.dense.bias', 'encoder.layer.5.output.LayerNorm.weight', 'encoder.layer.5.output.LayerNorm.bias', 'encoder.layer.6.attention.self.query.weight', 'encoder.layer.6.attention.self.query.bias', 'encoder.layer.6.attention.self.key.weight', 'encoder.layer.6.attention.self.key.bias', 'encoder.layer.6.attention.self.value.weight', 'encoder.layer.6.attention.self.value.bias', 'encoder.layer.6.attention.output.dense.weight', 'encoder.layer.6.attention.output.dense.bias', 'encoder.layer.6.attention.output.LayerNorm.weight', 'encoder.layer.6.attention.output.LayerNorm.bias', 'encoder.layer.6.intermediate.dense.weight', 'encoder.layer.6.intermediate.dense.bias', 'encoder.layer.6.output.dense.weight', 'encoder.layer.6.output.dense.bias', 'encoder.layer.6.output.LayerNorm.weight', 'encoder.layer.6.output.LayerNorm.bias', 'encoder.layer.7.attention.self.query.weight', 'encoder.layer.7.attention.self.query.bias', 'encoder.layer.7.attention.self.key.weight', 'encoder.layer.7.attention.self.key.bias', 'encoder.layer.7.attention.self.value.weight', 'encoder.layer.7.attention.self.value.bias', 'encoder.layer.7.attention.output.dense.weight', 'encoder.layer.7.attention.output.dense.bias', 'encoder.layer.7.attention.output.LayerNorm.weight', 'encoder.layer.7.attention.output.LayerNorm.bias', 'encoder.layer.7.intermediate.dense.weight', 'encoder.layer.7.intermediate.dense.bias', 'encoder.layer.7.output.dense.weight', 'encoder.layer.7.output.dense.bias', 'encoder.layer.7.output.LayerNorm.weight', 'encoder.layer.7.output.LayerNorm.bias', 'encoder.layer.8.attention.self.query.weight', 'encoder.layer.8.attention.self.query.bias', 'encoder.layer.8.attention.self.key.weight', 'encoder.layer.8.attention.self.key.bias', 'encoder.layer.8.attention.self.value.weight', 'encoder.layer.8.attention.self.value.bias', 'encoder.layer.8.attention.output.dense.weight', 'encoder.layer.8.attention.output.dense.bias', 'encoder.layer.8.attention.output.LayerNorm.weight', 'encoder.layer.8.attention.output.LayerNorm.bias', 'encoder.layer.8.intermediate.dense.weight', 'encoder.layer.8.intermediate.dense.bias', 'encoder.layer.8.output.dense.weight', 'encoder.layer.8.output.dense.bias', 'encoder.layer.8.output.LayerNorm.weight', 'encoder.layer.8.output.LayerNorm.bias', 'encoder.layer.9.attention.self.query.weight', 'encoder.layer.9.attention.self.query.bias', 'encoder.layer.9.attention.self.key.weight', 'encoder.layer.9.attention.self.key.bias', 'encoder.layer.9.attention.self.value.weight', 'encoder.layer.9.attention.self.value.bias', 'encoder.layer.9.attention.output.dense.weight', 'encoder.layer.9.attention.output.dense.bias', 'encoder.layer.9.attention.output.LayerNorm.weight', 'encoder.layer.9.attention.output.LayerNorm.bias', 'encoder.layer.9.intermediate.dense.weight', 'encoder.layer.9.intermediate.dense.bias', 'encoder.layer.9.output.dense.weight', 'encoder.layer.9.output.dense.bias', 'encoder.layer.9.output.LayerNorm.weight', 'encoder.layer.9.output.LayerNorm.bias', 'encoder.layer.10.attention.self.query.weight', 'encoder.layer.10.attention.self.query.bias', 'encoder.layer.10.attention.self.key.weight', 'encoder.layer.10.attention.self.key.bias', 'encoder.layer.10.attention.self.value.weight', 'encoder.layer.10.attention.self.value.bias', 'encoder.layer.10.attention.output.dense.weight', 'encoder.layer.10.attention.output.dense.bias', 'encoder.layer.10.attention.output.LayerNorm.weight', 'encoder.layer.10.attention.output.LayerNorm.bias', 'encoder.layer.10.intermediate.dense.weight', 'encoder.layer.10.intermediate.dense.bias', 'encoder.layer.10.output.dense.weight', 'encoder.layer.10.output.dense.bias', 'encoder.layer.10.output.LayerNorm.weight', 'encoder.layer.10.output.LayerNorm.bias', 'encoder.layer.11.attention.self.query.weight', 'encoder.layer.11.attention.self.query.bias', 'encoder.layer.11.attention.self.key.weight', 'encoder.layer.11.attention.self.key.bias', 'encoder.layer.11.attention.self.value.weight', 'encoder.layer.11.attention.self.value.bias', 'encoder.layer.11.attention.output.dense.weight', 'encoder.layer.11.attention.output.dense.bias', 'encoder.layer.11.attention.output.LayerNorm.weight', 'encoder.layer.11.attention.output.LayerNorm.bias', 'encoder.layer.11.intermediate.dense.weight', 'encoder.layer.11.intermediate.dense.bias', 'encoder.layer.11.output.dense.weight', 'encoder.layer.11.output.dense.bias', 'encoder.layer.11.output.LayerNorm.weight', 'encoder.layer.11.output.LayerNorm.bias']
+- This IS expected if you are initializing ElectraCrfForNer from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPretraining model).
+- This IS NOT expected if you are initializing ElectraCrfForNer from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of ElectraCrfForNer were not initialized from the model checkpoint at prev_trained_model/electra_zh_base and are newly initialized: ['bert.embeddings.word_embeddings.weight', 'bert.embeddings.position_embeddings.weight', 'bert.embeddings.token_type_embeddings.weight', 'bert.embeddings.LayerNorm.weight', 'bert.embeddings.LayerNorm.bias', 'bert.encoder.layer.0.attention.self.query.weight', 'bert.encoder.layer.0.attention.self.query.bias', 'bert.encoder.layer.0.attention.self.key.weight', 'bert.encoder.layer.0.attention.self.key.bias', 'bert.encoder.layer.0.attention.self.value.weight', 'bert.encoder.layer.0.attention.self.value.bias', 'bert.encoder.layer.0.attention.output.dense.weight', 'bert.encoder.layer.0.attention.output.dense.bias', 'bert.encoder.layer.0.attention.output.LayerNorm.weight', 'bert.encoder.layer.0.attention.output.LayerNorm.bias', 'bert.encoder.layer.0.intermediate.dense.weight', 'bert.encoder.layer.0.intermediate.dense.bias', 'bert.encoder.layer.0.output.dense.weight', 'bert.encoder.layer.0.output.dense.bias', 'bert.encoder.layer.0.output.LayerNorm.weight', 'bert.encoder.layer.0.output.LayerNorm.bias', 'bert.encoder.layer.1.attention.self.query.weight', 'bert.encoder.layer.1.attention.self.query.bias', 'bert.encoder.layer.1.attention.self.key.weight', 'bert.encoder.layer.1.attention.self.key.bias', 'bert.encoder.layer.1.attention.self.value.weight', 'bert.encoder.layer.1.attention.self.value.bias', 'bert.encoder.layer.1.attention.output.dense.weight', 'bert.encoder.layer.1.attention.output.dense.bias', 'bert.encoder.layer.1.attention.output.LayerNorm.weight', 'bert.encoder.layer.1.attention.output.LayerNorm.bias', 'bert.encoder.layer.1.intermediate.dense.weight', 'bert.encoder.layer.1.intermediate.dense.bias', 'bert.encoder.layer.1.output.dense.weight', 'bert.encoder.layer.1.output.dense.bias', 'bert.encoder.layer.1.output.LayerNorm.weight', 'bert.encoder.layer.1.output.LayerNorm.bias', 'bert.encoder.layer.2.attention.self.query.weight', 'bert.encoder.layer.2.attention.self.query.bias', 'bert.encoder.layer.2.attention.self.key.weight', 'bert.encoder.layer.2.attention.self.key.bias', 'bert.encoder.layer.2.attention.self.value.weight', 'bert.encoder.layer.2.attention.self.value.bias', 'bert.encoder.layer.2.attention.output.dense.weight', 'bert.encoder.layer.2.attention.output.dense.bias', 'bert.encoder.layer.2.attention.output.LayerNorm.weight', 'bert.encoder.layer.2.attention.output.LayerNorm.bias', 'bert.encoder.layer.2.intermediate.dense.weight', 'bert.encoder.layer.2.intermediate.dense.bias', 'bert.encoder.layer.2.output.dense.weight', 'bert.encoder.layer.2.output.dense.bias', 'bert.encoder.layer.2.output.LayerNorm.weight', 'bert.encoder.layer.2.output.LayerNorm.bias', 'bert.encoder.layer.3.attention.self.query.weight', 'bert.encoder.layer.3.attention.self.query.bias', 'bert.encoder.layer.3.attention.self.key.weight', 'bert.encoder.layer.3.attention.self.key.bias', 'bert.encoder.layer.3.attention.self.value.weight', 'bert.encoder.layer.3.attention.self.value.bias', 'bert.encoder.layer.3.attention.output.dense.weight', 'bert.encoder.layer.3.attention.output.dense.bias', 'bert.encoder.layer.3.attention.output.LayerNorm.weight', 'bert.encoder.layer.3.attention.output.LayerNorm.bias', 'bert.encoder.layer.3.intermediate.dense.weight', 'bert.encoder.layer.3.intermediate.dense.bias', 'bert.encoder.layer.3.output.dense.weight', 'bert.encoder.layer.3.output.dense.bias', 'bert.encoder.layer.3.output.LayerNorm.weight', 'bert.encoder.layer.3.output.LayerNorm.bias', 'bert.encoder.layer.4.attention.self.query.weight', 'bert.encoder.layer.4.attention.self.query.bias', 'bert.encoder.layer.4.attention.self.key.weight', 'bert.encoder.layer.4.attention.self.key.bias', 'bert.encoder.layer.4.attention.self.value.weight', 'bert.encoder.layer.4.attention.self.value.bias', 'bert.encoder.layer.4.attention.output.dense.weight', 'bert.encoder.layer.4.attention.output.dense.bias', 'bert.encoder.layer.4.attention.output.LayerNorm.weight', 'bert.encoder.layer.4.attention.output.LayerNorm.bias', 'bert.encoder.layer.4.intermediate.dense.weight', 'bert.encoder.layer.4.intermediate.dense.bias', 'bert.encoder.layer.4.output.dense.weight', 'bert.encoder.layer.4.output.dense.bias', 'bert.encoder.layer.4.output.LayerNorm.weight', 'bert.encoder.layer.4.output.LayerNorm.bias', 'bert.encoder.layer.5.attention.self.query.weight', 'bert.encoder.layer.5.attention.self.query.bias', 'bert.encoder.layer.5.attention.self.key.weight', 'bert.encoder.layer.5.attention.self.key.bias', 'bert.encoder.layer.5.attention.self.value.weight', 'bert.encoder.layer.5.attention.self.value.bias', 'bert.encoder.layer.5.attention.output.dense.weight', 'bert.encoder.layer.5.attention.output.dense.bias', 'bert.encoder.layer.5.attention.output.LayerNorm.weight', 'bert.encoder.layer.5.attention.output.LayerNorm.bias', 'bert.encoder.layer.5.intermediate.dense.weight', 'bert.encoder.layer.5.intermediate.dense.bias', 'bert.encoder.layer.5.output.dense.weight', 'bert.encoder.layer.5.output.dense.bias', 'bert.encoder.layer.5.output.LayerNorm.weight', 'bert.encoder.layer.5.output.LayerNorm.bias', 'bert.encoder.layer.6.attention.self.query.weight', 'bert.encoder.layer.6.attention.self.query.bias', 'bert.encoder.layer.6.attention.self.key.weight', 'bert.encoder.layer.6.attention.self.key.bias', 'bert.encoder.layer.6.attention.self.value.weight', 'bert.encoder.layer.6.attention.self.value.bias', 'bert.encoder.layer.6.attention.output.dense.weight', 'bert.encoder.layer.6.attention.output.dense.bias', 'bert.encoder.layer.6.attention.output.LayerNorm.weight', 'bert.encoder.layer.6.attention.output.LayerNorm.bias', 'bert.encoder.layer.6.intermediate.dense.weight', 'bert.encoder.layer.6.intermediate.dense.bias', 'bert.encoder.layer.6.output.dense.weight', 'bert.encoder.layer.6.output.dense.bias', 'bert.encoder.layer.6.output.LayerNorm.weight', 'bert.encoder.layer.6.output.LayerNorm.bias', 'bert.encoder.layer.7.attention.self.query.weight', 'bert.encoder.layer.7.attention.self.query.bias', 'bert.encoder.layer.7.attention.self.key.weight', 'bert.encoder.layer.7.attention.self.key.bias', 'bert.encoder.layer.7.attention.self.value.weight', 'bert.encoder.layer.7.attention.self.value.bias', 'bert.encoder.layer.7.attention.output.dense.weight', 'bert.encoder.layer.7.attention.output.dense.bias', 'bert.encoder.layer.7.attention.output.LayerNorm.weight', 'bert.encoder.layer.7.attention.output.LayerNorm.bias', 'bert.encoder.layer.7.intermediate.dense.weight', 'bert.encoder.layer.7.intermediate.dense.bias', 'bert.encoder.layer.7.output.dense.weight', 'bert.encoder.layer.7.output.dense.bias', 'bert.encoder.layer.7.output.LayerNorm.weight', 'bert.encoder.layer.7.output.LayerNorm.bias', 'bert.encoder.layer.8.attention.self.query.weight', 'bert.encoder.layer.8.attention.self.query.bias', 'bert.encoder.layer.8.attention.self.key.weight', 'bert.encoder.layer.8.attention.self.key.bias', 'bert.encoder.layer.8.attention.self.value.weight', 'bert.encoder.layer.8.attention.self.value.bias', 'bert.encoder.layer.8.attention.output.dense.weight', 'bert.encoder.layer.8.attention.output.dense.bias', 'bert.encoder.layer.8.attention.output.LayerNorm.weight', 'bert.encoder.layer.8.attention.output.LayerNorm.bias', 'bert.encoder.layer.8.intermediate.dense.weight', 'bert.encoder.layer.8.intermediate.dense.bias', 'bert.encoder.layer.8.output.dense.weight', 'bert.encoder.layer.8.output.dense.bias', 'bert.encoder.layer.8.output.LayerNorm.weight', 'bert.encoder.layer.8.output.LayerNorm.bias', 'bert.encoder.layer.9.attention.self.query.weight', 'bert.encoder.layer.9.attention.self.query.bias', 'bert.encoder.layer.9.attention.self.key.weight', 'bert.encoder.layer.9.attention.self.key.bias', 'bert.encoder.layer.9.attention.self.value.weight', 'bert.encoder.layer.9.attention.self.value.bias', 'bert.encoder.layer.9.attention.output.dense.weight', 'bert.encoder.layer.9.attention.output.dense.bias', 'bert.encoder.layer.9.attention.output.LayerNorm.weight', 'bert.encoder.layer.9.attention.output.LayerNorm.bias', 'bert.encoder.layer.9.intermediate.dense.weight', 'bert.encoder.layer.9.intermediate.dense.bias', 'bert.encoder.layer.9.output.dense.weight', 'bert.encoder.layer.9.output.dense.bias', 'bert.encoder.layer.9.output.LayerNorm.weight', 'bert.encoder.layer.9.output.LayerNorm.bias', 'bert.encoder.layer.10.attention.self.query.weight', 'bert.encoder.layer.10.attention.self.query.bias', 'bert.encoder.layer.10.attention.self.key.weight', 'bert.encoder.layer.10.attention.self.key.bias', 'bert.encoder.layer.10.attention.self.value.weight', 'bert.encoder.layer.10.attention.self.value.bias', 'bert.encoder.layer.10.attention.output.dense.weight', 'bert.encoder.layer.10.attention.output.dense.bias', 'bert.encoder.layer.10.attention.output.LayerNorm.weight', 'bert.encoder.layer.10.attention.output.LayerNorm.bias', 'bert.encoder.layer.10.intermediate.dense.weight', 'bert.encoder.layer.10.intermediate.dense.bias', 'bert.encoder.layer.10.output.dense.weight', 'bert.encoder.layer.10.output.dense.bias', 'bert.encoder.layer.10.output.LayerNorm.weight', 'bert.encoder.layer.10.output.LayerNorm.bias', 'bert.encoder.layer.11.attention.self.query.weight', 'bert.encoder.layer.11.attention.self.query.bias', 'bert.encoder.layer.11.attention.self.key.weight', 'bert.encoder.layer.11.attention.self.key.bias', 'bert.encoder.layer.11.attention.self.value.weight', 'bert.encoder.layer.11.attention.self.value.bias', 'bert.encoder.layer.11.attention.output.dense.weight', 'bert.encoder.layer.11.attention.output.dense.bias', 'bert.encoder.layer.11.attention.output.LayerNorm.weight', 'bert.encoder.layer.11.attention.output.LayerNorm.bias', 'bert.encoder.layer.11.intermediate.dense.weight', 'bert.encoder.layer.11.intermediate.dense.bias', 'bert.encoder.layer.11.output.dense.weight', 'bert.encoder.layer.11.output.dense.bias', 'bert.encoder.layer.11.output.LayerNorm.weight', 'bert.encoder.layer.11.output.LayerNorm.bias', 'classifier.weight', 'classifier.bias', 'crf.start_transitions', 'crf.end_transitions', 'crf.transitions']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading configuration file prev_trained_model/electra_zh_base/config.json
+Model config ElectraConfig {
+  "architectures": [
+    "ElectraModel"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "embedding_size": 768,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "electra",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "summary_activation": "gelu",
+  "summary_last_dropout": 0.1,
+  "summary_type": "first",
+  "summary_use_proj": true,
+  "type_vocab_size": 2,
+  "vocab_size": 21128
+}
+
+loading weights file prev_trained_model/electra_zh_base/pytorch_model.bin
+All model checkpoint weights were used when initializing ElectraModel.
+
+All the weights of ElectraModel were initialized from the model checkpoint at prev_trained_model/electra_zh_base.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use ElectraModel for predictions without further training.
+Loading Electra from prev_trained_model/electra_zh_base...
+loading weights file outputs/electra/checkpoint-6000/pytorch_model.bin
+All model checkpoint weights were used when initializing ElectraCrfForNer.
+
+All the weights of ElectraCrfForNer were initialized from the model checkpoint at outputs/electra/checkpoint-6000.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use ElectraCrfForNer for predictions without further training.
+Training/evaluation parameters Namespace(adam_epsilon=1e-08, adv_epsilon=1.0, adv_name='word_embeddings', cache_dir='', config_name='prev_trained_model/electra_zh_base/config.json', contiu_train='outputs/electra/checkpoint-6000', crf_learning_rate=0.001, data_dir='datasets/companyNER', device=device(type='cuda'), do_adv=False, do_eval=False, do_lower_case=False, do_predict=False, do_train=True, eval_all_checkpoints=False, eval_max_seq_length=128, evaluate_during_training='True', fix=False, flood=1.0, fp16=False, fp16_opt_level='O1', gradient_accumulation_steps=1, id2label={0: 'O', 1: 'B-ORG', 2: 'I-ORG'}, label2id={'O': 0, 'B-ORG': 1, 'I-ORG': 2}, learning_rate=5e-05, local_rank=-1, logging_steps=50, markup='bio', max_grad_norm=1.0, max_steps=-1, model_name_or_path='prev_trained_model/electra_zh_base', model_type='electra', n_gpu=1, no_cuda=False, num_train_epochs=6, optimizer='AdamW', output_dir='outputs/electra', overwrite_cache=False, overwrite_output_dir=True, per_gpu_eval_batch_size=64, per_gpu_train_batch_size=64, predict_checkpoints=0, save_steps=5000, seed=42, server_ip='', server_port='', task_name='cner', tokenizer_name='prev_trained_model/electra_zh_base/vocab.txt', train_max_seq_length=128, warmup_proportion=0.1, weight_decay=0.01)
+Loading features from cached file datasets/companyNER/cached_crf-train_electra_zh_base_128_cner
+***** Running training *****
+  Num examples = 66888
+  Num Epochs = 6
+  Instantaneous batch size per GPU = 64
+  Total train batch size (w. parallel, distributed & accumulation) = 64
+  Gradient Accumulation steps = 1
+  Total optimization steps = 6276
+############### Epoch_0 ###############
+Creating features from dataset file at datasets/companyNER
+Writing example 0 of 999
+*** Example ***
+guid: dev-1
+tokens: [CLS] 股 民 诉 外 高 桥 ( 6 0 0 6 4 8 ) 虚 假 陈 述 案 立 案 海 创 投 资 减 持 海 螺 水 泥 至 4 . 9 9 % , 系 工 会 及 原 管 理 层 持 股 平 台 英 派 斯 股 东 青 岛 拥 湾 拟 减 持 不 超 3 . 8 6 % 股 份 [SEP]
+input_ids: 101 5500 3696 6401 1912 7770 3441 113 127 121 121 127 125 129 114 5994 969 7357 6835 3428 4989 3428 3862 1158 2832 6598 1121 2898 3862 6090 3717 3799 5635 125 119 130 130 110 117 5143 2339 833 1350 1333 5052 4415 2231 2898 5500 2398 1378 5739 3836 3172 5500 691 7471 2270 2881 3968 2877 1121 2898 679 6631 124 119 129 127 110 5500 819 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label_ids: 0 0 0 0 1 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 2 2 0 0 1 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 2 0 0 1 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+*** Example ***
+guid: dev-2
+tokens: [CLS] 中 毅 达 ( 6 0 0 6 1 0 ) 管 理 层 [UNK] 崩 盘 [UNK] , 1 1 名 董 监 高 集 体 辞 职 海 马 汽 车 ( 0 0 0 5 7 2 ) 亿 元 政 府 补 贴 落 袋 未 披 露 [SEP]
+input_ids: 101 704 3675 6809 113 127 121 121 127 122 121 114 5052 4415 2231 100 2309 4669 100 117 122 122 1399 5869 4664 7770 7415 860 6791 5466 3862 7716 3749 6756 113 121 121 121 126 128 123 114 783 1039 3124 2424 6133 6585 5862 6150 3313 2847 7463 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label_ids: 0 1 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+*** Example ***
+guid: dev-3
+tokens: [CLS] , 去 年 6 月 8 日 ， 滨 州 沾 化 区 公 安 局 以 涉 嫌 组 织 、 领 导 传 销 活 动 罪 对 北 京 悦 天 使 公 司 立 案 侦 查 [SEP]
+input_ids: 101 117 1343 2399 127 3299 129 3189 8024 4012 2336 3783 1265 1277 1062 2128 2229 809 3868 2066 5299 5302 510 7566 2193 837 7218 3833 1220 5389 2190 1266 776 2643 1921 886 1062 1385 4989 3428 903 3389 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label_ids: 0 0 0 0 0 0 0 0 0 1 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 2 2 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+*** Example ***
+guid: dev-4
+tokens: [CLS] 中 证 解 读 : 锦 江 股 份 ( 6 0 0 7 5 4 ) 再 启 减 持 长 江 证 券 ( 0 0 0 7 8 3 ) 股 份 计 划 , 源 于 业 务 扩 张 需 求 合 肥 百 货 ( 0 0 0 4 1 7 ) 1 0 日 起 停 牌 , 因 传 媒 报 道 未 披 露 信 息 贾 跃 亭 : [UNK] 乐 视 网 i p o 1 0 0 % 没 有 造 假 [UNK] [SEP]
+input_ids: 101 704 6395 6237 6438 131 7239 3736 5500 819 113 127 121 121 128 126 125 114 1086 1423 1121 2898 7270 3736 6395 1171 113 121 121 121 128 129 124 114 5500 819 6369 1153 117 3975 754 689 1218 2810 2476 7444 3724 1394 5503 4636 6573 113 121 121 121 125 122 128 114 122 121 3189 6629 977 4277 117 1728 837 2054 2845 6887 3313 2847 7463 928 2622 6593 6645 777 131 100 727 6228 5381 151 158 157 122 121 121 110 3766 3300 6863 969 100 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label_ids: 0 0 0 0 0 0 1 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0 1 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+*** Example ***
+guid: dev-5
+tokens: [CLS] 唐 山 港 遭 国 家 队 清 仓 减 持 , 近 6 万 新 进 股 东 高 位 站 岗 湖 南 天 雁 ( 6 0 0 6 9 8 ) 涉 嫌 信 披 违 规 [SEP]
+input_ids: 101 1538 2255 3949 6901 1744 2157 7339 3926 797 1121 2898 117 6818 127 674 3173 6822 5500 691 7770 855 4991 2266 3959 1298 1921 7412 113 127 121 121 127 130 129 114 3868 2066 928 2847 6824 6226 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label_ids: 0 1 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Saving features into cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8985 - recall: 0.9229 - f1: 0.9105 - loss: 1.4988 - origin: 2867.0000 - found: 2945.0000 - right: 2646.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8985 - recall: 0.9229 - f1: 0.9105 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.9008 - recall: 0.9215 - f1: 0.9110 - loss: 1.5097 - origin: 2867.0000 - found: 2933.0000 - right: 2642.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.9008 - recall: 0.9215 - f1: 0.9110 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8984 - recall: 0.9222 - f1: 0.9102 - loss: 1.5171 - origin: 2867.0000 - found: 2943.0000 - right: 2644.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8984 - recall: 0.9222 - f1: 0.9102 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.9036 - recall: 0.9191 - f1: 0.9113 - loss: 1.4918 - origin: 2867.0000 - found: 2916.0000 - right: 2635.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.9036 - recall: 0.9191 - f1: 0.9113 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8963 - recall: 0.9222 - f1: 0.9091 - loss: 1.5517 - origin: 2867.0000 - found: 2950.0000 - right: 2644.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8963 - recall: 0.9222 - f1: 0.9091 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.9014 - recall: 0.9180 - f1: 0.9096 - loss: 1.5050 - origin: 2867.0000 - found: 2920.0000 - right: 2632.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.9014 - recall: 0.9180 - f1: 0.9096 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8945 - recall: 0.9222 - f1: 0.9081 - loss: 1.5618 - origin: 2867.0000 - found: 2956.0000 - right: 2644.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8945 - recall: 0.9222 - f1: 0.9081 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8982 - recall: 0.9166 - f1: 0.9073 - loss: 1.4958 - origin: 2867.0000 - found: 2926.0000 - right: 2628.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8982 - recall: 0.9166 - f1: 0.9073 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.9108 - recall: 0.9156 - f1: 0.9132 - loss: 1.5117 - origin: 2867.0000 - found: 2882.0000 - right: 2625.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.9108 - recall: 0.9156 - f1: 0.9132 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.9060 - recall: 0.9177 - f1: 0.9118 - loss: 1.5086 - origin: 2867.0000 - found: 2904.0000 - right: 2631.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.9060 - recall: 0.9177 - f1: 0.9118 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8929 - recall: 0.9215 - f1: 0.9070 - loss: 1.6150 - origin: 2867.0000 - found: 2959.0000 - right: 2642.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8929 - recall: 0.9215 - f1: 0.9070 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8933 - recall: 0.9170 - f1: 0.9050 - loss: 1.5465 - origin: 2867.0000 - found: 2943.0000 - right: 2629.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8933 - recall: 0.9170 - f1: 0.9050 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8823 - recall: 0.9233 - f1: 0.9023 - loss: 1.5420 - origin: 2867.0000 - found: 3000.0000 - right: 2647.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8823 - recall: 0.9233 - f1: 0.9023 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8899 - recall: 0.9138 - f1: 0.9017 - loss: 1.5559 - origin: 2867.0000 - found: 2944.0000 - right: 2620.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8899 - recall: 0.9138 - f1: 0.9017 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8985 - recall: 0.9142 - f1: 0.9063 - loss: 1.4805 - origin: 2867.0000 - found: 2917.0000 - right: 2621.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8985 - recall: 0.9142 - f1: 0.9063 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8998 - recall: 0.9142 - f1: 0.9069 - loss: 1.5690 - origin: 2867.0000 - found: 2913.0000 - right: 2621.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8998 - recall: 0.9142 - f1: 0.9069 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.9135 - recall: 0.9100 - f1: 0.9118 - loss: 1.4403 - origin: 2867.0000 - found: 2856.0000 - right: 2609.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.9135 - recall: 0.9100 - f1: 0.9118 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8992 - recall: 0.9177 - f1: 0.9083 - loss: 1.6418 - origin: 2867.0000 - found: 2926.0000 - right: 2631.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8992 - recall: 0.9177 - f1: 0.9083 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8889 - recall: 0.9240 - f1: 0.9061 - loss: 1.4756 - origin: 2867.0000 - found: 2980.0000 - right: 2649.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8889 - recall: 0.9240 - f1: 0.9061 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8813 - recall: 0.9191 - f1: 0.8998 - loss: 1.6319 - origin: 2867.0000 - found: 2990.0000 - right: 2635.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8813 - recall: 0.9191 - f1: 0.8998 
+
+
+############### Epoch_1 ###############
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8995 - recall: 0.9205 - f1: 0.9098 - loss: 1.5251 - origin: 2867.0000 - found: 2934.0000 - right: 2639.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8995 - recall: 0.9205 - f1: 0.9098 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8930 - recall: 0.9198 - f1: 0.9062 - loss: 1.6666 - origin: 2867.0000 - found: 2953.0000 - right: 2637.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8930 - recall: 0.9198 - f1: 0.9062 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8877 - recall: 0.9152 - f1: 0.9013 - loss: 1.7834 - origin: 2867.0000 - found: 2956.0000 - right: 2624.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8877 - recall: 0.9152 - f1: 0.9013 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8881 - recall: 0.9104 - f1: 0.8991 - loss: 1.6232 - origin: 2867.0000 - found: 2939.0000 - right: 2610.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8881 - recall: 0.9104 - f1: 0.8991 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8968 - recall: 0.9215 - f1: 0.9090 - loss: 1.6860 - origin: 2867.0000 - found: 2946.0000 - right: 2642.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8968 - recall: 0.9215 - f1: 0.9090 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.9019 - recall: 0.9138 - f1: 0.9078 - loss: 1.5381 - origin: 2867.0000 - found: 2905.0000 - right: 2620.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.9019 - recall: 0.9138 - f1: 0.9078 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.9005 - recall: 0.9191 - f1: 0.9097 - loss: 1.6059 - origin: 2867.0000 - found: 2926.0000 - right: 2635.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.9005 - recall: 0.9191 - f1: 0.9097 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8976 - recall: 0.9079 - f1: 0.9027 - loss: 1.5431 - origin: 2867.0000 - found: 2900.0000 - right: 2603.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8976 - recall: 0.9079 - f1: 0.9027 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8904 - recall: 0.9184 - f1: 0.9042 - loss: 1.6300 - origin: 2867.0000 - found: 2957.0000 - right: 2633.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8904 - recall: 0.9184 - f1: 0.9042 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.9058 - recall: 0.9093 - f1: 0.9076 - loss: 1.5136 - origin: 2867.0000 - found: 2878.0000 - right: 2607.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.9058 - recall: 0.9093 - f1: 0.9076 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8944 - recall: 0.9159 - f1: 0.9050 - loss: 1.5926 - origin: 2867.0000 - found: 2936.0000 - right: 2626.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8944 - recall: 0.9159 - f1: 0.9050 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8851 - recall: 0.9083 - f1: 0.8965 - loss: 1.5718 - origin: 2867.0000 - found: 2942.0000 - right: 2604.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8851 - recall: 0.9083 - f1: 0.8965 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8849 - recall: 0.9142 - f1: 0.8993 - loss: 1.6796 - origin: 2867.0000 - found: 2962.0000 - right: 2621.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8849 - recall: 0.9142 - f1: 0.8993 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.9003 - recall: 0.8975 - f1: 0.8989 - loss: 1.5391 - origin: 2867.0000 - found: 2858.0000 - right: 2573.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.9003 - recall: 0.8975 - f1: 0.8989 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8867 - recall: 0.9250 - f1: 0.9054 - loss: 1.6570 - origin: 2867.0000 - found: 2991.0000 - right: 2652.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8867 - recall: 0.9250 - f1: 0.9054 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8935 - recall: 0.9187 - f1: 0.9059 - loss: 1.5472 - origin: 2867.0000 - found: 2948.0000 - right: 2634.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8935 - recall: 0.9187 - f1: 0.9059 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8869 - recall: 0.9243 - f1: 0.9052 - loss: 1.6977 - origin: 2867.0000 - found: 2988.0000 - right: 2650.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8869 - recall: 0.9243 - f1: 0.9052 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8643 - recall: 0.9152 - f1: 0.8890 - loss: 1.7378 - origin: 2867.0000 - found: 3036.0000 - right: 2624.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8643 - recall: 0.9152 - f1: 0.8890 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8625 - recall: 0.9191 - f1: 0.8899 - loss: 1.8275 - origin: 2867.0000 - found: 3055.0000 - right: 2635.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8625 - recall: 0.9191 - f1: 0.8899 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8941 - recall: 0.9156 - f1: 0.9047 - loss: 1.5558 - origin: 2867.0000 - found: 2936.0000 - right: 2625.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8941 - recall: 0.9156 - f1: 0.9047 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8898 - recall: 0.9072 - f1: 0.8984 - loss: 1.5236 - origin: 2867.0000 - found: 2923.0000 - right: 2601.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8898 - recall: 0.9072 - f1: 0.8984 
+
+
+############### Epoch_2 ###############
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8795 - recall: 0.9163 - f1: 0.8975 - loss: 1.6106 - origin: 2867.0000 - found: 2987.0000 - right: 2627.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8795 - recall: 0.9163 - f1: 0.8975 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8866 - recall: 0.9159 - f1: 0.9010 - loss: 1.7309 - origin: 2867.0000 - found: 2962.0000 - right: 2626.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8866 - recall: 0.9159 - f1: 0.9010 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8953 - recall: 0.9128 - f1: 0.9040 - loss: 1.6149 - origin: 2867.0000 - found: 2923.0000 - right: 2617.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8953 - recall: 0.9128 - f1: 0.9040 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8830 - recall: 0.9163 - f1: 0.8993 - loss: 1.6992 - origin: 2867.0000 - found: 2975.0000 - right: 2627.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8830 - recall: 0.9163 - f1: 0.8993 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8802 - recall: 0.9173 - f1: 0.8984 - loss: 1.7437 - origin: 2867.0000 - found: 2988.0000 - right: 2630.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8802 - recall: 0.9173 - f1: 0.8984 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8942 - recall: 0.9142 - f1: 0.9041 - loss: 1.7109 - origin: 2867.0000 - found: 2931.0000 - right: 2621.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8942 - recall: 0.9142 - f1: 0.9041 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8895 - recall: 0.9152 - f1: 0.9022 - loss: 1.6489 - origin: 2867.0000 - found: 2950.0000 - right: 2624.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8895 - recall: 0.9152 - f1: 0.9022 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8912 - recall: 0.9170 - f1: 0.9039 - loss: 1.6222 - origin: 2867.0000 - found: 2950.0000 - right: 2629.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8912 - recall: 0.9170 - f1: 0.9039 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8999 - recall: 0.9065 - f1: 0.9032 - loss: 1.6064 - origin: 2867.0000 - found: 2888.0000 - right: 2599.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8999 - recall: 0.9065 - f1: 0.9032 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8785 - recall: 0.9131 - f1: 0.8955 - loss: 1.7612 - origin: 2867.0000 - found: 2980.0000 - right: 2618.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8785 - recall: 0.9131 - f1: 0.8955 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8800 - recall: 0.9233 - f1: 0.9011 - loss: 1.8393 - origin: 2867.0000 - found: 3008.0000 - right: 2647.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8800 - recall: 0.9233 - f1: 0.9011 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8835 - recall: 0.9152 - f1: 0.8991 - loss: 1.6713 - origin: 2867.0000 - found: 2970.0000 - right: 2624.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8835 - recall: 0.9152 - f1: 0.8991 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8936 - recall: 0.9107 - f1: 0.9021 - loss: 1.6194 - origin: 2867.0000 - found: 2922.0000 - right: 2611.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8936 - recall: 0.9107 - f1: 0.9021 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8946 - recall: 0.9173 - f1: 0.9058 - loss: 1.5151 - origin: 2867.0000 - found: 2940.0000 - right: 2630.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8946 - recall: 0.9173 - f1: 0.9058 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8928 - recall: 0.9152 - f1: 0.9039 - loss: 1.5504 - origin: 2867.0000 - found: 2939.0000 - right: 2624.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8928 - recall: 0.9152 - f1: 0.9039 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8839 - recall: 0.9159 - f1: 0.8996 - loss: 1.5738 - origin: 2867.0000 - found: 2971.0000 - right: 2626.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8839 - recall: 0.9159 - f1: 0.8996 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8953 - recall: 0.9097 - f1: 0.9024 - loss: 1.5886 - origin: 2867.0000 - found: 2913.0000 - right: 2608.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8953 - recall: 0.9097 - f1: 0.9024 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8906 - recall: 0.9142 - f1: 0.9022 - loss: 1.6037 - origin: 2867.0000 - found: 2943.0000 - right: 2621.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8906 - recall: 0.9142 - f1: 0.9022 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8806 - recall: 0.9131 - f1: 0.8966 - loss: 1.6559 - origin: 2867.0000 - found: 2973.0000 - right: 2618.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8806 - recall: 0.9131 - f1: 0.8966 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8938 - recall: 0.9215 - f1: 0.9074 - loss: 1.5867 - origin: 2867.0000 - found: 2956.0000 - right: 2642.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8938 - recall: 0.9215 - f1: 0.9074 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8941 - recall: 0.9104 - f1: 0.9022 - loss: 1.4966 - origin: 2867.0000 - found: 2919.0000 - right: 2610.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8941 - recall: 0.9104 - f1: 0.9022 
+
+
+############### Epoch_3 ###############
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8908 - recall: 0.9104 - f1: 0.9005 - loss: 1.5499 - origin: 2867.0000 - found: 2930.0000 - right: 2610.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8908 - recall: 0.9104 - f1: 0.9005 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8979 - recall: 0.9051 - f1: 0.9015 - loss: 1.6090 - origin: 2867.0000 - found: 2890.0000 - right: 2595.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8979 - recall: 0.9051 - f1: 0.9015 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8946 - recall: 0.9086 - f1: 0.9015 - loss: 1.5833 - origin: 2867.0000 - found: 2912.0000 - right: 2605.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8946 - recall: 0.9086 - f1: 0.9015 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8813 - recall: 0.9166 - f1: 0.8986 - loss: 1.7551 - origin: 2867.0000 - found: 2982.0000 - right: 2628.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8813 - recall: 0.9166 - f1: 0.8986 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8901 - recall: 0.9125 - f1: 0.9011 - loss: 1.5525 - origin: 2867.0000 - found: 2939.0000 - right: 2616.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8901 - recall: 0.9125 - f1: 0.9011 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8993 - recall: 0.9069 - f1: 0.9031 - loss: 1.5898 - origin: 2867.0000 - found: 2891.0000 - right: 2600.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8993 - recall: 0.9069 - f1: 0.9031 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8846 - recall: 0.9173 - f1: 0.9007 - loss: 1.5964 - origin: 2867.0000 - found: 2973.0000 - right: 2630.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8846 - recall: 0.9173 - f1: 0.9007 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8844 - recall: 0.9205 - f1: 0.9021 - loss: 1.6866 - origin: 2867.0000 - found: 2984.0000 - right: 2639.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8844 - recall: 0.9205 - f1: 0.9021 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8938 - recall: 0.9191 - f1: 0.9063 - loss: 1.6689 - origin: 2867.0000 - found: 2948.0000 - right: 2635.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8938 - recall: 0.9191 - f1: 0.9063 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8790 - recall: 0.9173 - f1: 0.8978 - loss: 1.7985 - origin: 2867.0000 - found: 2992.0000 - right: 2630.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8790 - recall: 0.9173 - f1: 0.8978 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8887 - recall: 0.9187 - f1: 0.9034 - loss: 1.6347 - origin: 2867.0000 - found: 2964.0000 - right: 2634.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8887 - recall: 0.9187 - f1: 0.9034 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8971 - recall: 0.9212 - f1: 0.9090 - loss: 1.5375 - origin: 2867.0000 - found: 2944.0000 - right: 2641.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8971 - recall: 0.9212 - f1: 0.9090 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8951 - recall: 0.9163 - f1: 0.9055 - loss: 1.5177 - origin: 2867.0000 - found: 2935.0000 - right: 2627.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8951 - recall: 0.9163 - f1: 0.9055 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8719 - recall: 0.9090 - f1: 0.8900 - loss: 1.7505 - origin: 2867.0000 - found: 2989.0000 - right: 2606.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8719 - recall: 0.9090 - f1: 0.8900 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8735 - recall: 0.9125 - f1: 0.8925 - loss: 1.6931 - origin: 2867.0000 - found: 2995.0000 - right: 2616.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8735 - recall: 0.9125 - f1: 0.8925 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8818 - recall: 0.9135 - f1: 0.8974 - loss: 1.6434 - origin: 2867.0000 - found: 2970.0000 - right: 2619.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8818 - recall: 0.9135 - f1: 0.8974 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8967 - recall: 0.9111 - f1: 0.9038 - loss: 1.5425 - origin: 2867.0000 - found: 2913.0000 - right: 2612.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8967 - recall: 0.9111 - f1: 0.9038 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8963 - recall: 0.9041 - f1: 0.9002 - loss: 1.5673 - origin: 2867.0000 - found: 2892.0000 - right: 2592.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8963 - recall: 0.9041 - f1: 0.9002 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8805 - recall: 0.9152 - f1: 0.8976 - loss: 1.6643 - origin: 2867.0000 - found: 2980.0000 - right: 2624.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8805 - recall: 0.9152 - f1: 0.8976 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8896 - recall: 0.9163 - f1: 0.9027 - loss: 1.6189 - origin: 2867.0000 - found: 2953.0000 - right: 2627.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8896 - recall: 0.9163 - f1: 0.9027 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8924 - recall: 0.9138 - f1: 0.9030 - loss: 1.5895 - origin: 2867.0000 - found: 2936.0000 - right: 2620.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8924 - recall: 0.9138 - f1: 0.9030 
+
+
+############### Epoch_4 ###############
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8869 - recall: 0.8975 - f1: 0.8922 - loss: 1.5750 - origin: 2867.0000 - found: 2901.0000 - right: 2573.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8869 - recall: 0.8975 - f1: 0.8922 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8819 - recall: 0.9166 - f1: 0.8989 - loss: 1.5965 - origin: 2867.0000 - found: 2980.0000 - right: 2628.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8819 - recall: 0.9166 - f1: 0.8989 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8860 - recall: 0.9083 - f1: 0.8970 - loss: 1.5548 - origin: 2867.0000 - found: 2939.0000 - right: 2604.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8860 - recall: 0.9083 - f1: 0.8970 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8968 - recall: 0.9090 - f1: 0.9028 - loss: 1.5200 - origin: 2867.0000 - found: 2906.0000 - right: 2606.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8968 - recall: 0.9090 - f1: 0.9028 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8837 - recall: 0.9142 - f1: 0.8987 - loss: 1.7036 - origin: 2867.0000 - found: 2966.0000 - right: 2621.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8837 - recall: 0.9142 - f1: 0.8987 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8959 - recall: 0.9097 - f1: 0.9027 - loss: 1.5959 - origin: 2867.0000 - found: 2911.0000 - right: 2608.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8959 - recall: 0.9097 - f1: 0.9027 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8884 - recall: 0.9138 - f1: 0.9010 - loss: 1.5942 - origin: 2867.0000 - found: 2949.0000 - right: 2620.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8884 - recall: 0.9138 - f1: 0.9010 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8953 - recall: 0.9159 - f1: 0.9055 - loss: 1.6089 - origin: 2867.0000 - found: 2933.0000 - right: 2626.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8953 - recall: 0.9159 - f1: 0.9055 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8920 - recall: 0.9104 - f1: 0.9011 - loss: 1.5582 - origin: 2867.0000 - found: 2926.0000 - right: 2610.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8920 - recall: 0.9104 - f1: 0.9011 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8906 - recall: 0.9118 - f1: 0.9011 - loss: 1.5566 - origin: 2867.0000 - found: 2935.0000 - right: 2614.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8906 - recall: 0.9118 - f1: 0.9011 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8857 - recall: 0.9111 - f1: 0.8982 - loss: 1.5308 - origin: 2867.0000 - found: 2949.0000 - right: 2612.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8857 - recall: 0.9111 - f1: 0.8982 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8925 - recall: 0.9090 - f1: 0.9006 - loss: 1.5579 - origin: 2867.0000 - found: 2920.0000 - right: 2606.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8925 - recall: 0.9090 - f1: 0.9006 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8850 - recall: 0.9156 - f1: 0.9001 - loss: 1.6224 - origin: 2867.0000 - found: 2966.0000 - right: 2625.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8850 - recall: 0.9156 - f1: 0.9001 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8949 - recall: 0.9090 - f1: 0.9019 - loss: 1.5517 - origin: 2867.0000 - found: 2912.0000 - right: 2606.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8949 - recall: 0.9090 - f1: 0.9019 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8880 - recall: 0.9177 - f1: 0.9026 - loss: 1.6167 - origin: 2867.0000 - found: 2963.0000 - right: 2631.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8880 - recall: 0.9177 - f1: 0.9026 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8852 - recall: 0.9170 - f1: 0.9008 - loss: 1.6133 - origin: 2867.0000 - found: 2970.0000 - right: 2629.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8852 - recall: 0.9170 - f1: 0.9008 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8784 - recall: 0.9173 - f1: 0.8975 - loss: 1.5925 - origin: 2867.0000 - found: 2994.0000 - right: 2630.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8784 - recall: 0.9173 - f1: 0.8975 
+Configuration saved in outputs/electra/checkpoint-5000/config.json
+Model weights saved in outputs/electra/checkpoint-5000/pytorch_model.bin
+Saving model checkpoint to outputs/electra/checkpoint-5000
+Saving optimizer and scheduler states to outputs/electra/checkpoint-5000
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8824 - recall: 0.9131 - f1: 0.8975 - loss: 1.5596 - origin: 2867.0000 - found: 2967.0000 - right: 2618.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8824 - recall: 0.9131 - f1: 0.8975 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8848 - recall: 0.9159 - f1: 0.9001 - loss: 1.6595 - origin: 2867.0000 - found: 2968.0000 - right: 2626.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8848 - recall: 0.9159 - f1: 0.9001 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8884 - recall: 0.9159 - f1: 0.9019 - loss: 1.5858 - origin: 2867.0000 - found: 2956.0000 - right: 2626.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8884 - recall: 0.9159 - f1: 0.9019 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8909 - recall: 0.9170 - f1: 0.9037 - loss: 1.6281 - origin: 2867.0000 - found: 2951.0000 - right: 2629.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8909 - recall: 0.9170 - f1: 0.9037 
+
+
+############### Epoch_5 ###############
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8904 - recall: 0.9156 - f1: 0.9028 - loss: 1.6089 - origin: 2867.0000 - found: 2948.0000 - right: 2625.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8904 - recall: 0.9156 - f1: 0.9028 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8884 - recall: 0.9163 - f1: 0.9021 - loss: 1.5885 - origin: 2867.0000 - found: 2957.0000 - right: 2627.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8884 - recall: 0.9163 - f1: 0.9021 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8926 - recall: 0.9159 - f1: 0.9041 - loss: 1.4989 - origin: 2867.0000 - found: 2942.0000 - right: 2626.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8926 - recall: 0.9159 - f1: 0.9041 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8919 - recall: 0.9121 - f1: 0.9019 - loss: 1.5409 - origin: 2867.0000 - found: 2932.0000 - right: 2615.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8919 - recall: 0.9121 - f1: 0.9019 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8952 - recall: 0.9149 - f1: 0.9050 - loss: 1.5437 - origin: 2867.0000 - found: 2930.0000 - right: 2623.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8952 - recall: 0.9149 - f1: 0.9050 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8907 - recall: 0.9121 - f1: 0.9013 - loss: 1.5391 - origin: 2867.0000 - found: 2936.0000 - right: 2615.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8907 - recall: 0.9121 - f1: 0.9013 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8834 - recall: 0.9142 - f1: 0.8985 - loss: 1.6080 - origin: 2867.0000 - found: 2967.0000 - right: 2621.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8834 - recall: 0.9142 - f1: 0.8985 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8925 - recall: 0.9152 - f1: 0.9037 - loss: 1.5661 - origin: 2867.0000 - found: 2940.0000 - right: 2624.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8925 - recall: 0.9152 - f1: 0.9037 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8882 - recall: 0.9118 - f1: 0.8998 - loss: 1.5301 - origin: 2867.0000 - found: 2943.0000 - right: 2614.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8882 - recall: 0.9118 - f1: 0.8998 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8916 - recall: 0.9149 - f1: 0.9031 - loss: 1.5871 - origin: 2867.0000 - found: 2942.0000 - right: 2623.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8916 - recall: 0.9149 - f1: 0.9031 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8872 - recall: 0.9131 - f1: 0.9000 - loss: 1.5621 - origin: 2867.0000 - found: 2951.0000 - right: 2618.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8872 - recall: 0.9131 - f1: 0.9000 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8950 - recall: 0.9093 - f1: 0.9021 - loss: 1.5116 - origin: 2867.0000 - found: 2913.0000 - right: 2607.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8950 - recall: 0.9093 - f1: 0.9021 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8847 - recall: 0.9125 - f1: 0.8984 - loss: 1.5403 - origin: 2867.0000 - found: 2957.0000 - right: 2616.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8847 - recall: 0.9125 - f1: 0.8984 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8941 - recall: 0.9156 - f1: 0.9047 - loss: 1.5161 - origin: 2867.0000 - found: 2936.0000 - right: 2625.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8941 - recall: 0.9156 - f1: 0.9047 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8816 - recall: 0.9138 - f1: 0.8974 - loss: 1.5794 - origin: 2867.0000 - found: 2972.0000 - right: 2620.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8816 - recall: 0.9138 - f1: 0.8974 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8839 - recall: 0.9163 - f1: 0.8998 - loss: 1.5736 - origin: 2867.0000 - found: 2972.0000 - right: 2627.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8839 - recall: 0.9163 - f1: 0.8998 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8835 - recall: 0.9180 - f1: 0.9004 - loss: 1.5896 - origin: 2867.0000 - found: 2979.0000 - right: 2632.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8835 - recall: 0.9180 - f1: 0.9004 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8842 - recall: 0.9163 - f1: 0.9000 - loss: 1.5537 - origin: 2867.0000 - found: 2971.0000 - right: 2627.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8842 - recall: 0.9163 - f1: 0.9000 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8869 - recall: 0.9163 - f1: 0.9014 - loss: 1.5465 - origin: 2867.0000 - found: 2962.0000 - right: 2627.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8869 - recall: 0.9163 - f1: 0.9014 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8886 - recall: 0.9177 - f1: 0.9029 - loss: 1.5487 - origin: 2867.0000 - found: 2961.0000 - right: 2631.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8886 - recall: 0.9177 - f1: 0.9029 
+Loading features from cached file datasets/companyNER/cached_crf-dev_electra_zh_base_128_cner
+***** Running evaluation  *****
+  Num examples = 999
+  Batch size = 64
+
+
+***** Eval results  *****
+ acc: 0.8882 - recall: 0.9170 - f1: 0.9024 - loss: 1.5427 - origin: 2867.0000 - found: 2960.0000 - right: 2629.0000 
+***** Entity results  *****
+******* ORG results ********
+ acc: 0.8882 - recall: 0.9170 - f1: 0.9024 
+
+
+ global_step = 6276, average loss = 1.213672344845294
+Saving model checkpoint to outputs/electra
+Configuration saved in outputs/electra/config.json
+Model weights saved in outputs/electra/pytorch_model.bin
