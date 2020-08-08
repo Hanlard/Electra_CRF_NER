@@ -28,6 +28,8 @@ password：0klm
 ![add image](https://github.com/Hanlard/Electra_CRF_NER/blob/master/workflow/pre-training.png)
 
 # Electra_CRF_NER
+注：图片用Chrome浏览器可以显示。
+
 1. 模型结构采用：预训练模型+CRF
 
 2. 我们的测试环境为1个Tesla P4 显存8GB
